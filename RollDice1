@@ -1,0 +1,26 @@
+import java.util.Random;
+public class RollDice1 {
+public static void main (String [] args)
+{
+  Random RollDice = new Random();
+  int RollCount1 = 0;
+  int RollCount2 = 0;
+  int face;
+  for (int roll = 1; roll <=20; roll ++)
+  {
+  	face = 1 + RollDice.nextInt(6);
+ switch (face)
+ {
+ case 1:
+   ++ RollCount1;
+   break;
+ case 2:
+   ++ RollCount2;
+  	 break;
+ }
+  }
+  System.out.println("Face\tRollCount");
+  System.out.printf("1\t%d\n2\t%d", RollCount1, RollCount2);
+}
+}
+
